@@ -22,8 +22,7 @@ const Formulario = () => {
                     <option value="MX">México</option>
                     <option value="AR">Argentina</option>
                     <option value="CO">Colombia</option>
-                    <option value="CR">Costa Rica</option>
-                    <option value="PE">Perú</option>
+
                 </select>
                 <label htmlFor="pais">Pais: </label>
             </div>
