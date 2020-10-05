@@ -6,6 +6,8 @@ const Formulario = () => {
         ciudad: '',
         pais: ''
     });
+
+    const [ error, guardarError ] = useState(false);
     
     const { ciudad, pais } = busqueda;
     
@@ -18,8 +20,29 @@ const Formulario = () => {
         })
     }
     
+    //Cuando el usuario envia el formulario
+    const handleSubmit = e =>{
+        e.preventDefault();
+
+        //Validacion
+        if(ciudad.trim() === '' || pais.trim() === '' ){
+            guardarError(true);
+            return;
+        }
+        //Mensaje de error
+        guardarError(false);
+        
+        //Pasar al componente principal
+        
+        
+    }
+
+
     return ( 
-        <form>
+        <form
+            onSubmit={handleSubmit}
+        >
+            {error ? <p className="red darken-4 error">Todos los campos son obligatorios</p> : null}
             <div className="input-field col s12">
                 <input
                     type="text"
@@ -46,6 +69,14 @@ const Formulario = () => {
 
                 </select>
                 <label htmlFor="pais">Pais: </label>
+            </div>
+            <div className="input-field col s12">
+                <button
+                    type="submit"
+                    value="Buscar"
+                    className="waves-effect waves-light btn-large btn-block yellow accent-4 btn-letra col s12"
+                >Buscar
+                </button>
             </div>
         </form>
      );

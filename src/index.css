@@ -34,3 +34,17 @@ input[type=text]:not(.browser-default):focus:not([readonly]) {
 input[type=text]:not(.browser-default):focus:not([readonly]) + label {
   color: white;
 }
+.btn-block {
+  display: block !important;
+  
+}
+.btn-letra {
+  color: black;
+}
+.error {
+  padding: 1rem !important;
+  margin-top: 3rem;
+  text-emphasis: left;
+  text-align: center !important;
+  color: #FFF !important;
+}
