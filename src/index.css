@@ -48,3 +48,19 @@ input[type=text]:not(.browser-default):focus:not([readonly]) + label {
   text-align: center !important;
   color: #FFF !important;
 }
+.card-panel h2 {
+  font-size: 1.6rem;
+  text-align: center;
+}
+.card-panel p {
+  text-align: center;
+  font-size: 1.4rem;
+}
+.temperatura {
+  font-size: 4rem!important
+}
+.temperatura span {
+  font-size: 2rem!important;
+  vertical-align: super;
+  font-weight: italic;
+}
