@@ -3,7 +3,7 @@ import PropTypes from 'prop-types';
 
 const Clima = ({ resultado }) => {
     
-    const  { name, main } = resultado;
+    const  { name, main, sys } = resultado;
     
     if(!name) return null;
 
@@ -12,18 +12,18 @@ const Clima = ({ resultado }) => {
     return ( 
         
         <div className="card-panel white col s12">
-            <div className="black-text">
-                <h2>El clima de {name} es: </h2>
+            <div className="black-text glass">
+                <h2>{name}, {sys.country}  </h2>
                 <p className="temperatura">
                     {Number.parseFloat(main.temp -  kelvin).toFixed(1)} <span> &#x2103;</span>
                 </p>
                 <p>
-                    Temperatura Máxima: 
-                    {Number.parseFloat(main.temp_max -  kelvin).toFixed(1)} <span> &#x2103;</span>
+                    T. Máxima:&nbsp; 
+                    <span  className="maxima">{Number.parseFloat(main.temp_max -  kelvin).toFixed(1)}  &#x2103;</span>
                 </p>
                 <p>
-                    Temperatura Mínima: 
-                    {Number.parseFloat(main.temp_min -  kelvin).toFixed(1)} <span> &#x2103;</span>
+                    T. Mínima:&nbsp; 
+                    <span  className="minima">{Number.parseFloat(main.temp_min -  kelvin).toFixed(1)}  &#x2103;</span>
                 </p>
             </div>
         </div>
