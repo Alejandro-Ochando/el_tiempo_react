@@ -55,7 +55,7 @@ function App() {
   return (
     <Fragment>
       <Header 
-        titulo='El Tiempo App'
+        titulo='Temperatura App'
       />
 
       <div className="contenedor-form">

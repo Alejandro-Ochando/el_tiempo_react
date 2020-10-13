@@ -61,20 +61,23 @@ input[type=text]:not(.browser-default):focus:not([readonly]) + label {
   margin-top:15px;
   padding-top: 1.5rem;
   font-weight: bold;
+  font-family: 'Libre Baskerville', serif;
 }
 .card-panel p {
   text-align: center;
   font-size: 1.4rem;
   margin-bottom: 1rem;
   color: #fff;
+  font-family: 'Libre Baskerville', serif;
+  font-size: 12pt;
 }
 .temperatura {
+  margin-top: 30px;
   font-size: 4rem!important;
   color: rgb(255, 255, 255);
   padding-left:30px;
 }
 .temperatura span {
-  font-size: 2rem!important;
   vertical-align: super;
   font-weight: italic;
 }
@@ -84,8 +87,11 @@ input[type=text]:not(.browser-default):focus:not([readonly]) + label {
   border-radius:20px;
 }
 .maxima{
-  color: tomato;
+  color: rgb(197, 45, 18);
 }
 .minima{
   color: #4169E1;
+}
+.temp_minima{
+  padding-bottom: 15px;
 }

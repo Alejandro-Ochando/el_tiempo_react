@@ -18,11 +18,11 @@ const Clima = ({ resultado }) => {
                     {Number.parseFloat(main.temp -  kelvin).toFixed(1)} <span> &#x2103;</span>
                 </p>
                 <p>
-                    T. Máxima:&nbsp; 
+                    T. Máxima:&nbsp; &nbsp; 
                     <span  className="maxima">{Number.parseFloat(main.temp_max -  kelvin).toFixed(1)}  &#x2103;</span>
                 </p>
-                <p>
-                    T. Mínima:&nbsp; 
+                <p className="temp_minima">
+                    T. Mínima:&nbsp; &nbsp;
                     <span  className="minima">{Number.parseFloat(main.temp_min -  kelvin).toFixed(1)}  &#x2103;</span>
                 </p>
             </div>
